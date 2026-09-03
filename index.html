@@ -132,12 +132,6 @@
             margin: 5px 0 10px 0;
         }
 
-        .item-precio {
-            color: var(--oro-tactico);
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
         .item-select {
             background-color: var(--fondo-tactico);
             color: var(--texto-claro);
@@ -251,10 +245,7 @@
 
     <header>
         <div class="logo-container">
-            <img src="logo.jpeg" 
-                 alt="World of Wings Logo" 
-                 class="logo-img"
-                 onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src='logo.JPG'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src='logo.jpg'; } else if (this.dataset.tried === '2') { this.dataset.tried = '3'; this.src='logo.png'; }">
+            <img src="logo.jpeg" alt="World of Wings Logo" class="logo-img">
         </div>
         <h1>WORLD OF WINGS</h1>
         <p>Sabor de Alto Impacto • Edición Táctica</p>
@@ -269,69 +260,78 @@
             <div class="mision-firma">— Minsi, Orgullosa Esposa y Chef de World of Wings</div>
         </div>
 
-        <!-- SECCIÓN ALITAS -->
-        <h2 class="seccion-titulo">🍗 ESCUADRÓN DE ALITAS</h2>
+        <!-- SECCIÓN ALITAS (INFANTERÍA & COMANDO) -->
+        <h2 class="seccion-titulo">🍗 ALITAS (INFANTERÍA & COMANDO)</h2>
         <div class="menu-grid">
             <div class="item-card">
                 <div>
-                    <div class="item-nombre">Alitas Tácticas (6 Unidades)</div>
-                    <div class="item-desc">Jugosas alitas crujientes bañadas en tu salsa favorita.</div>
-                    <div class="item-precio">$6.00</div>
+                    <div class="item-nombre">Alitas Ración Infantería</div>
+                    <div class="item-desc">Ración individual crujiente. Selecciona tu salsa táctica.</div>
                 </div>
-                <select id="salsa-alitas-6" class="item-select">
-                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
-                    <option value="Buffalo Picante">Salsa: Buffalo Picante</option>
-                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
-                    <option value="Ajo Parmesano">Salsa: Ajo Parmesano</option>
+                <label style="color: var(--oro-tactico); font-size: 0.8rem; margin-top: 5px;">Salsa Báse:</label>
+                <select id="salsa-alitas-infanteria" class="item-select">
+                    <option value="BBQ Clásica">BBQ Clásica</option>
+                    <option value="Buffalo Picante">Buffalo Picante</option>
+                    <option value="Miel Mostaza Táctica">Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Ajo Parmesano</option>
+                    <option value="Maracuyá Táctico">Maracuyá Táctico</option>
                 </select>
-                <button class="btn-agregar" onclick="agregarAlCarrito('Alitas Tácticas (6 Uds)', 6.00, 'salsa-alitas-6')">Agregar a la Orden</button>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Alitas Ración Infantería', 'salsa-alitas-infanteria')">Agregar a la Orden</button>
             </div>
 
             <div class="item-card">
                 <div>
-                    <div class="item-nombre">Alitas Comando (12 Unidades)</div>
-                    <div class="item-desc">Ración doble con opción de hasta 2 salsas a elección.</div>
-                    <div class="item-precio">$11.00</div>
+                    <div class="item-nombre">Alitas Escuadrón Comando</div>
+                    <div class="item-desc">Ración doble para compartir. Selecciona hasta 2 salsas.</div>
                 </div>
-                <select id="salsa-alitas-12" class="item-select">
-                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
-                    <option value="Buffalo Picante">Salsa: Buffalo Picante</option>
-                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
-                    <option value="Ajo Parmesano">Salsa: Ajo Parmesano</option>
+                <label style="color: var(--oro-tactico); font-size: 0.8rem; margin-top: 5px;">Salsa 1:</label>
+                <select id="salsa1-alitas-comando" class="item-select">
+                    <option value="BBQ Clásica">BBQ Clásica</option>
+                    <option value="Buffalo Picante">Buffalo Picante</option>
+                    <option value="Miel Mostaza Táctica">Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Ajo Parmesano</option>
                 </select>
-                <button class="btn-agregar" onclick="agregarAlCarrito('Alitas Comando (12 Uds)', 11.00, 'salsa-alitas-12')">Agregar a la Orden</button>
+                <label style="color: var(--oro-tactico); font-size: 0.8rem; margin-top: 5px;">Salsa 2:</label>
+                <select id="salsa2-alitas-comando" class="item-select">
+                    <option value="BBQ Clásica">BBQ Clásica</option>
+                    <option value="Buffalo Picante">Buffalo Picante</option>
+                    <option value="Miel Mostaza Táctica">Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Ajo Parmesano</option>
+                </select>
+                <button class="btn-agregar" onclick="agregarAlCarritoDobleSalsa('Alitas Escuadrón Comando', 'salsa1-alitas-comando', 'salsa2-alitas-comando')">Agregar a la Orden</button>
             </div>
         </div>
 
-        <!-- SECCIÓN TIRAS -->
-        <h2 class="seccion-titulo">🎖️ TIRAS & MUNICIÓN INFANTIL</h2>
+        <!-- SECCIÓN TIRAS / INFANTERÍA LIGERA -->
+        <h2 class="seccion-titulo">🎖️ TIRAS / INFANTERÍA LIGERA</h2>
         <div class="menu-grid">
             <div class="item-card">
                 <div>
                     <div class="item-nombre">Tiras de Pechuga Tácticas</div>
-                    <div class="item-desc">Tiras de pechuga empanizadas, doradas y crujientes.</div>
-                    <div class="item-precio">$5.50</div>
+                    <div class="item-desc">Tiras de pechuga empanizadas y crujientes.</div>
                 </div>
+                <label style="color: var(--oro-tactico); font-size: 0.8rem; margin-top: 5px;">Salsa a elección:</label>
                 <select id="salsa-tiras" class="item-select">
-                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
-                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
-                    <option value="Ajo Parmesano">Salsa: Ajo Parmesano</option>
+                    <option value="BBQ Clásica">BBQ Clásica</option>
+                    <option value="Miel Mostaza Táctica">Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Ajo Parmesano</option>
+                    <option value="Sin Salsa">Sin Salsa</option>
                 </select>
-                <button class="btn-agregar" onclick="agregarAlCarrito('Tiras de Pechuga', 5.50, 'salsa-tiras')">Agregar a la Orden</button>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Tiras de Pechuga Tácticas', 'salsa-tiras')">Agregar a la Orden</button>
             </div>
 
             <div class="item-card">
                 <div>
-                    <div class="item-nombre">Baby Bravo (Kids Menu)</div>
-                    <div class="item-desc">Ración infantil de tiras suavemente sazonadas + papas.</div>
-                    <div class="item-precio">$4.00</div>
+                    <div class="item-nombre">Baby Bravo (Menú Infantil)</div>
+                    <div class="item-desc">Ración infantil de tiras suaves + papas.</div>
                 </div>
+                <label style="color: var(--oro-tactico); font-size: 0.8rem; margin-top: 5px;">Acompañamiento / Salsa:</label>
                 <select id="salsa-baby" class="item-select">
                     <option value="Sin Salsa (Natural)">Sin Salsa (Natural)</option>
-                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
-                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
+                    <option value="BBQ Clásica">BBQ Clásica</option>
+                    <option value="Miel Mostaza">Miel Mostaza</option>
                 </select>
-                <button class="btn-agregar" onclick="agregarAlCarrito('Baby Bravo (Kids)', 4.00, 'salsa-baby')">Agregar a la Orden</button>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Baby Bravo (Kids)', 'salsa-baby')">Agregar a la Orden</button>
             </div>
         </div>
 
@@ -340,11 +340,16 @@
         <div class="menu-grid">
             <div class="item-card">
                 <div>
-                    <div class="item-nombre">Elixir Místico de Vinagre Artesanal</div>
-                    <div class="item-desc">Fórmula especial de la casa para aderezar e intensificar sabores.</div>
-                    <div class="item-precio">$3.50</div>
+                    <div class="item-nombre">Vinagre Artesanal Elixir</div>
+                    <div class="item-desc">Fórmula especial de la casa para sazonar y realzar sabores.</div>
                 </div>
-                <button class="btn-agregar" onclick="agregarAlCarrito('Vinagre Artesanal Elixir', 3.50, null)">Agregar a la Orden</button>
+                <label style="color: var(--oro-tactico); font-size: 0.8rem; margin-top: 5px;">Variedad:</label>
+                <select id="tipo-vinagre" class="item-select">
+                    <option value="Ajo & Hierbas Tácticas">Ajo & Hierbas Tácticas</option>
+                    <option value="Picante Especiado">Picante Especiado</option>
+                    <option value="Clásico de la Casa">Clásico de la Casa</option>
+                </select>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Vinagre Artesanal', 'tipo-vinagre')">Agregar a la Orden</button>
             </div>
         </div>
 
@@ -354,9 +359,6 @@
             <ul id="lista-orden" class="orden-lista">
                 <li style="text-align: center; color: #888;">Tu carrito de combate está vacío.</li>
             </ul>
-            <div style="text-align: right; font-size: 1.2rem; font-weight: bold; color: var(--oro-brillante); margin-bottom: 20px;">
-                Total: $<span id="total-precio">0.00</span>
-            </div>
 
             <div class="campo-formulario">
                 <label for="nombre-cliente">Nombre del Comandante / Cliente:</label>
@@ -396,43 +398,41 @@
     <script>
         let carrito = [];
 
-        function agregarAlCarrito(nombre, precio, selectId) {
-            let salsa = "";
+        function agregarAlCarrito(nombre, selectId) {
+            let detalle = "";
             if (selectId) {
                 const selectElement = document.getElementById(selectId);
-                salsa = " (" + selectElement.value + ")";
+                detalle = " (" + selectElement.value + ")";
             }
-            
-            const itemNombreCompleto = nombre + salsa;
-            carrito.push({ nombre: itemNombreCompleto, precio: precio });
+            carrito.push(nombre + detalle);
+            actualizarOrden();
+        }
+
+        function agregarAlCarritoDobleSalsa(nombre, select1Id, select2Id) {
+            const s1 = document.getElementById(select1Id).value;
+            const s2 = document.getElementById(select2Id).value;
+            carrito.push(nombre + " [Salsas: " + s1 + " / " + s2 + "]");
             actualizarOrden();
         }
 
         function actualizarOrden() {
             const lista = document.getElementById('lista-orden');
-            const totalElemento = document.getElementById('total-precio');
             
             if (carrito.length === 0) {
                 lista.innerHTML = '<li style="text-align: center; color: #888;">Tu carrito de combate está vacío.</li>';
-                totalElemento.innerText = '0.00';
                 return;
             }
 
             lista.innerHTML = '';
-            let total = 0;
-
             carrito.forEach((item, index) => {
-                total += item.precio;
                 const li = document.createElement('li');
                 li.className = 'orden-item';
                 li.innerHTML = `
-                    <span>${item.nombre} - $${item.precio.toFixed(2)}</span>
+                    <span>${item}</span>
                     <button style="background: var(--rojo-alerta); color: white; border: none; padding: 2px 8px; border-radius: 3px; cursor: pointer;" onclick="eliminarDelCarrito(${index})">X</button>
                 `;
                 lista.appendChild(li);
             });
-
-            totalElemento.innerText = total.toFixed(2);
         }
 
         function eliminarDelCarrito(index) {
@@ -461,19 +461,15 @@
                 return;
             }
 
-            let ordenTexto = carrito.map(i => i.nombre + " - $" + i.precio.toFixed(2));
-            let totalFinal = document.getElementById('total-precio').innerText;
-
             let msg = `🪖 *DESPLIEGUE DE PEDIDO - WORLD OF WINGS*%0A%0A` +
                       `👤 *Cliente:* ${nombre}%0A` +
                       `📍 *Entrega:* ${direccion}%0A` +
-                      `🍗 *Raciones:*%0A• ${ordenTexto.join('%0A• ')}%0A%0A` +
-                      `💵 *Total:* $${totalFinal}%0A` +
+                      `🍗 *Raciones:*%0A• ${carrito.join('%0A• ')}%0A%0A` +
                       `💳 *Pago:* ${metodo}%0A` +
                       `🔢 *Referencia:* ${ref || 'Efectivo USD'}%0A` +
                       `⚠️ *Estado:* En espera de verificación.`;
 
-            // REEMPLAZA 584XXXXXXXXX POR TU NÚMERO REAL DE WHATSAPP AL LANZAR
+            // REEMPLAZA CON TU NÚMERO DE WHATSAPP AL LANZAR
             window.location.href = `https://wa.me/584XXXXXXXXX?text=${msg}`;
         }
     </script>
