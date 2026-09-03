@@ -24,7 +24,6 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--negro-absoluto);
             color: var(--blanco-suave);
-            /* Fondo camuflajeado oscuro y elegante con patrón táctico */
             background-image: 
                 radial-gradient(circle at 50% 50%, rgba(20, 26, 19, 0.85) 0%, rgba(10, 12, 11, 0.98) 100%),
                 repeating-linear-gradient(45deg, rgba(31, 40, 29, 0.1) 0, rgba(31, 40, 29, 0.1) 10px, transparent 10px, transparent 20px);
@@ -32,7 +31,7 @@
             padding-bottom: 80px;
         }
 
-        /* HEADER Y LOGO CON EFECTO ELEGANTE */
+        /* HEADER Y LOGO */
         header {
             background: linear-gradient(180deg, rgba(10,12,11,1) 0%, rgba(20,26,19,0.95) 100%);
             border-bottom: 2px solid var(--oro-tactico);
@@ -81,7 +80,7 @@
 
         .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
 
-        /* HISTORIA Y MISIÓN ELEGANTE */
+        /* HISTORIA Y MISIÓN */
         .mision-card {
             background: rgba(31, 40, 29, 0.4);
             border: 1px solid rgba(212, 175, 55, 0.3);
@@ -116,7 +115,7 @@
             font-style: normal;
         }
 
-        /* SECCIONES Y TARJETAS INTERACTIVAS CON MOVIMIENTO */
+        /* SECCIONES Y TARJETAS INTERACTIVAS */
         .seccion-titulo {
             font-family: 'Cinzel', serif;
             color: var(--oro-tactico);
@@ -184,7 +183,6 @@
             border-color: var(--oro-tactico);
         }
 
-        /* BOTONES INTERACTIVOS CON EFECTO AL HACER CLICK */
         .btn-accion {
             background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
             color: var(--negro-absoluto);
@@ -210,7 +208,7 @@
             transform: scale(0.97);
         }
 
-        /* CHECKOUT / CARRITO DE COMPRA ELEGANTE */
+        /* CHECKOUT */
         .checkout-card {
             background: linear-gradient(180deg, rgba(20,26,19,0.95) 0%, rgba(10,12,11,1) 100%);
             border: 1px solid var(--oro-tactico);
@@ -279,9 +277,9 @@
 <body>
 
     <header>
-        <!-- LOGO DEL NEGOCIO -->
+        <!-- LOGO DEL NEGOCIO INTEGRADO -->
         <div class="logo-container">
-            <img src="logo.png" alt="World of Wings Logo" class="logo-img" onerror="this.style.display='none'">
+            <img src="Logo world of wings mejorado fondo transparente-convertido-a-mediano.jpeg" alt="World of Wings Logo" class="logo-img" onerror="this.style.display='none'">
         </div>
         <h1>WORLD OF WINGS</h1>
         <p>Sabor de Alto Impacto • Edición Táctica</p>
@@ -303,7 +301,7 @@
             <div class="card-item">
                 <div>
                     <h3>Patrulla Seis Alfa</h3>
-                    <p>6 Alitas crujientes preparadas bajo estrictos estándares tácticos.</p>
+                    <p>6 Alitas crujientes preparadas bajo strictly estándares tácticos.</p>
                 </div>
                 <div>
                     <select id="salsa-1">
@@ -406,18 +404,16 @@
 
     </div>
 
-    <!-- SCRIPT DE INTERACTIVIDAD Y SONIDO REALISTA DE HELICÓPTERO/VIETNAM -->
+    <!-- SCRIPT INTERACTIVO CON SONIDO TÁCTICO -->
     <script>
         let orden = [];
 
-        // EFECTO DE SONIDO TÁCTICO INTEGRADO VÍA WEB AUDIO API (Sin necesidad de cargar archivos mp3 externos)
         function reproducirSonidoEfecto() {
             try {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
                 const ctx = new AudioContext();
                 
-                // Generador de audio sintetizado estilo helicóptero militar / radio táctica
-                const bufferSize = ctx.sampleRate * 0.3; // 0.3 segundos de duración
+                const bufferSize = ctx.sampleRate * 0.3;
                 const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
                 const output = buffer.getChannelData(0);
                 
@@ -497,7 +493,7 @@
                       `🔢 *Referencia:* ${ref || 'Efectivo USD'}%0A%0A` +
                       `⚠️ *Estado:* En espera de verificación.`;
 
-            // Coloca tu número de WhatsApp real al final
+            // REEMPLAZA 584XXXXXXXXX POR TU NÚMERO REAL DE WHATSAPP
             window.location.href = `https://wa.me/584XXXXXXXXX?text=${msg}`;
         }
     </script>
