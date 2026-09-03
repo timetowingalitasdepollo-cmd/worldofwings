@@ -165,6 +165,20 @@
             margin-bottom: 15px;
         }
 
+        .badge-kids {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--oro-tactico);
+            color: var(--oro-brillante);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         select, input {
             width: 100%;
             padding: 12px;
@@ -318,78 +332,131 @@
         <!-- MENÚ DE ALITAS DE POLLO -->
         <h2 class="seccion-titulo">🪖 ALITAS DE POLLO</h2>
         <div class="grid-menu">
+            
             <div class="card-item">
                 <div>
                     <h3>"PATRULLA 6-ALFA"</h3>
                     <p>6 Alitas crujientes<br>+ 100g de Papas fritas<br>+ Ensalada Americana</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('PATRULLA 6-ALFA (ALITAS)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-alita-1">
+                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
+                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
+                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
+                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('PATRULLA 6-ALFA (ALITAS)', 'salsa-alita-1');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
             <div class="card-item">
                 <div>
                     <h3>"THE IRON TRIANGLE" (EL TRIÁNGULO DE HIERRO)</h3>
                     <p>10 Alitas crujientes<br>+ 200g de Papas fritas<br>+ 2 Ensaladas Americana</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE IRON TRIANGLE (ALITAS)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-alita-2">
+                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
+                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
+                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
+                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE IRON TRIANGLE (ALITAS)', 'salsa-alita-2');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
             <div class="card-item">
                 <div>
                     <h3>"ARCO LIGHT" (OPERACIÓN ARCO LIGHT)</h3>
                     <p>15 Alitas crujientes<br>+ 300g de Papas fritas<br>+ Ensalada Familiar</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('ARCO LIGHT (ALITAS)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-alita-3">
+                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
+                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
+                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
+                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('ARCO LIGHT (ALITAS)', 'salsa-alita-3');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
             <div class="card-item">
                 <div>
                     <h3>"OPERATION LINEBACKER" (FAMILIAR)</h3>
                     <p>24 Alitas crujientes<br>+ Ración extra grande de Papas<br>+ Ensalada + Salsas variadas</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('OPERATION LINEBACKER (ALITAS)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-alita-4">
+                        <option value="Salsas Variadas Seleccionadas">🟢 Salsas Variadas Incluidas</option>
+                        <option value="BLACK OPS BBQ">🟢 Opción 1: BLACK OPS BBQ</option>
+                        <option value="FUEGO ALIADO">🟡 Opción 2: FUEGO ALIADO</option>
+                        <option value="AGENTE NARANJA">🟠 Opción 3: AGENTE NARANJA</option>
+                        <option value="HONEY BRAVO">🟡 Opción 4: HONEY BRAVO</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('OPERATION LINEBACKER (ALITAS)', 'salsa-alita-4');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
         </div>
 
         <!-- MENÚ DE TIRAS DE POLLO -->
         <h2 class="seccion-titulo">🪖 TIRAS DE POLLO</h2>
         <div class="grid-menu">
+            
             <div class="card-item">
                 <div>
+                    <span class="badge-kids">👶 MUNICIÓN INFANTIL (MENÚ NIÑOS)</span>
                     <h3>"BABY BRAVO"</h3>
-                    <p>5 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana</p>
+                    <p>5 Tiras de pollo crujientes<br>+ Papas fritas<br>+ Ensalada Americana</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BABY BRAVO (TIRAS DE POLLO)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-tender-1">
+                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
+                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza - Ideal Niños)</option>
+                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango)</option>
+                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BABY BRAVO (MENÚ INFANTIL)', 'salsa-tender-1');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
             <div class="card-item">
                 <div>
                     <h3>"INFANTRY SPEC" (ESPECIFICACIÓN DE INFANTERÍA)</h3>
                     <p>8 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('INFANTRY SPEC (TIRAS DE POLLO)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-tender-2">
+                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
+                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
+                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
+                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('INFANTRY SPEC (TIRAS DE POLLO)', 'salsa-tender-2');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
             <div class="card-item">
                 <div>
                     <h3>"THE BIG BERTHA" (ARTILLERÍA PESADA)</h3>
                     <p>12 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana<br>+ Salsas</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE BIG BERTHA (TIRAS DE POLLO)');">🛒 Añadir a la Orden</button>
+                    <select id="salsa-tender-3">
+                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
+                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
+                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
+                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE BIG BERTHA (TIRAS DE POLLO)', 'salsa-tender-3');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
+
         </div>
 
-        <!-- SECCIÓN DE SALSAS -->
-        <h2 class="seccion-titulo">🪖 SALSAS</h2>
+        <!-- SECCIÓN DE SALSAS PARA LLEVAR / RACIONES EXTRA -->
+        <h2 class="seccion-titulo">🪖 SALSAS INDEPENDIENTES (PARA LLEVAR A CASA)</h2>
         <p style="text-align: center; color: var(--oro-tactico); margin-bottom: 20px; font-style: italic;">
             "Recetas fabricadas en nuestra propia armería. Sin conservantes, solo sabor de combate."
         </p>
@@ -400,7 +467,7 @@
                     <p>Ahumada en el campamento con un toque de madera de roble.</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BLACK OPS BBQ (SALSA)');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BLACK OPS BBQ (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
             <div class="card-item">
@@ -409,7 +476,7 @@
                     <p>Nuestra fórmula picante clásica.</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('FUEGO ALIADO (SALSA BUFALO)');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('FUEGO ALIADO (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
             <div class="card-item">
@@ -418,7 +485,7 @@
                     <p>Dulzor intenso con un final táctico.</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('AGENTE NARANJA (SALSA MANGO)');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('AGENTE NARANJA (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
             <div class="card-item">
@@ -427,7 +494,7 @@
                     <p>El equilibrio perfecto entre la dulzura de la miel pura y el ataque de la mostaza artesanal.</p>
                 </div>
                 <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('HONEY BRAVO (MIEL MOSTAZA)');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('HONEY BRAVO (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
         </div>
@@ -627,7 +694,7 @@
             let detalle = producto;
             if (selectId) {
                 let valor = document.getElementById(selectId).value;
-                detalle += ` (${valor})`;
+                detalle += ` + Salsa: [${valor}]`;
             }
             orden.push(detalle);
             actualizarLista();
