@@ -3,277 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WORLD OF WINGS — Base de Operaciones</title>
-    <!-- Fuentes Elegantes Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    
+    <title>World of Wings - Menú Táctico</title>
     <style>
         :root {
-            --oro-tactico: #D4AF37;
-            --oro-brillante: #F3E5AB;
-            --negro-absoluto: #0A0C0B;
-            --verde-militar-oscuro: #141A13;
-            --verde-militar-medio: #1F281D;
-            --gris-acero: #2A3029;
-            --blanco-suave: #F5F5F7;
+            --fondo-tactico: #111411;
+            --verde-oliva: #2d382b;
+            --oro-tactico: #d4af37;
+            --oro-brillante: #f3e5ab;
+            --negro-mate: #1a1a1a;
+            --texto-claro: #e0e0e0;
+            --rojo-alerta: #8b0000;
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--negro-absoluto);
-            color: var(--blanco-suave);
-            background-image: 
-                radial-gradient(circle at 50% 50%, rgba(20, 26, 19, 0.85) 0%, rgba(10, 12, 11, 0.98) 100%),
-                repeating-linear-gradient(45deg, rgba(31, 40, 29, 0.1) 0, rgba(31, 40, 29, 0.1) 10px, transparent 10px, transparent 20px);
-            background-attachment: fixed;
-            padding-bottom: 80px;
+            background-color: var(--fondo-tactico);
+            color: var(--texto-claro);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
-        /* HEADER Y LOGO */
         header {
-            background: linear-gradient(180deg, rgba(10,12,11,1) 0%, rgba(20,26,19,0.95) 100%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, var(--fondo-tactico) 100%);
             border-bottom: 2px solid var(--oro-tactico);
-            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            padding: 20px 15px;
         }
 
         .logo-container {
-            max-width: 210px;
-            margin: 0 auto 15px auto;
-            border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(135deg, var(--oro-tactico), transparent);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-            transition: transform 0.5s ease;
-        }
-
-        .logo-container:hover {
-            transform: scale(1.05) rotate(2deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
         .logo-img {
-            width: 100%;
+            max-width: 180px;
             height: auto;
             border-radius: 50%;
-            display: block;
+            filter: drop-shadow(0px 0px 8px var(--oro-tactico));
         }
 
-        header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
-            color: var(--oro-tactico);
-            letter-spacing: 3px;
+        h1 {
+            color: var(--oro-brillante);
+            font-size: 2rem;
+            margin: 10px 0 5px 0;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
         }
 
         header p {
+            color: var(--oro-tactico);
             font-size: 0.9rem;
-            letter-spacing: 2px;
-            color: #A5B0A0;
-            margin-top: 5px;
+            margin: 0;
             text-transform: uppercase;
-        }
-
-        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-
-        /* HISTORIA Y MISIÓN */
-        .mision-card {
-            background: rgba(31, 40, 29, 0.4);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-left: 4px solid var(--oro-tactico);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-        }
-
-        .mision-card h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--oro-brillante);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
             letter-spacing: 1px;
         }
 
-        .mision-card p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #D1D5D0;
-            font-style: italic;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        .mision-card {
+            background-color: rgba(45, 56, 43, 0.3);
+            border: 1px solid var(--oro-tactico);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        .mision-card h2 {
+            color: var(--oro-brillante);
+            font-size: 1.1rem;
+            margin-top: 0;
         }
 
         .mision-firma {
             text-align: right;
-            margin-top: 15px;
-            font-weight: 700;
+            font-style: italic;
             color: var(--oro-tactico);
-            font-style: normal;
+            margin-top: 10px;
         }
 
-        /* SECCIONES Y TARJETAS INTERACTIVAS */
         .seccion-titulo {
-            font-family: 'Cinzel', serif;
-            color: var(--oro-tactico);
-            font-size: 1.4rem;
-            margin: 40px 0 20px 0;
-            border-bottom: 1px solid var(--gris-acero);
-            padding-bottom: 10px;
-            letter-spacing: 2px;
+            color: var(--oro-brillante);
+            border-bottom: 1px solid var(--oro-tactico);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.3rem;
         }
 
-        .grid-menu {
+        .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
-        .card-item {
-            background: linear-gradient(145deg, rgba(20,26,19,0.8), rgba(10,12,11,0.9));
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 12px;
-            padding: 22px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        @media (min-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .item-card {
+            background-color: var(--negro-mate);
+            border: 1px solid var(--verde-oliva);
+            border-radius: 6px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative;
-            overflow: hidden;
         }
 
-        .card-item:hover {
-            transform: translateY(-8px);
-            border-color: var(--oro-tactico);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
-        }
-
-        .card-item h3 {
-            font-family: 'Cinzel', serif;
+        .item-nombre {
             color: var(--oro-brillante);
+            font-weight: bold;
             font-size: 1.1rem;
-            margin-bottom: 8px;
         }
 
-        .card-item p {
-            font-size: 0.88rem;
-            color: #B0B8AE;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .badge-kids {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.2);
-            border: 1px solid var(--oro-tactico);
-            color: var(--oro-brillante);
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        select, input {
-            width: 100%;
-            padding: 12px;
-            background: rgba(10, 12, 11, 0.8);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--blanco-suave);
-            border-radius: 6px;
-            font-family: 'Montserrat', sans-serif;
+        .item-desc {
             font-size: 0.85rem;
-            margin-bottom: 12px;
-            transition: border-color 0.3s;
+            color: #b0b0b0;
+            margin: 5px 0 10px 0;
         }
 
-        select:focus, input:focus {
-            outline: none;
-            border-color: var(--oro-tactico);
-        }
-
-        .btn-accion {
-            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
-            color: var(--negro-absoluto);
-            border: none;
-            width: 100%;
-            padding: 14px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-accion:hover {
-            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-        }
-
-        .btn-accion:active {
-            transform: scale(0.97);
-        }
-
-        /* CHECKOUT */
-        .checkout-card {
-            background: linear-gradient(180deg, rgba(20,26,19,0.95) 0%, rgba(10,12,11,1) 100%);
-            border: 1px solid var(--oro-tactico);
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-        }
-
-        .checkout-card h2 {
-            font-family: 'Cinzel', serif;
+        .item-precio {
             color: var(--oro-tactico);
-            text-align: center;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 1rem;
         }
 
-        .item-orden {
+        .item-select {
+            background-color: var(--fondo-tactico);
+            color: var(--texto-claro);
+            border: 1px solid var(--oro-tactico);
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .btn-agregar {
+            background-color: var(--verde-oliva);
+            color: var(--oro-brillante);
+            border: 1px solid var(--oro-tactico);
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .btn-agregar:hover {
+            background-color: var(--oro-tactico);
+            color: var(--negro-mate);
+        }
+
+        .orden-panel {
+            background-color: var(--negro-mate);
+            border: 2px solid var(--oro-tactico);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .orden-panel h2 {
+            color: var(--oro-brillante);
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px solid var(--verde-oliva);
+            padding-bottom: 10px;
+        }
+
+        .orden-lista {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .orden-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px dashed var(--verde-oliva);
+            padding: 8px 0;
+        }
+
+        .campo-formulario {
+            margin-bottom: 15px;
+        }
+
+        .campo-formulario label {
+            display: block;
+            color: var(--oro-tactico);
+            margin-bottom: 5px;
             font-size: 0.9rem;
         }
 
-        .btn-borrar {
-            background: transparent;
-            border: 1px solid #FF5555;
-            color: #FF5555;
-            padding: 3px 8px;
+        .campo-formulario input, .campo-formulario select {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--fondo-tactico);
+            border: 1px solid var(--verde-oliva);
+            color: var(--texto-claro);
             border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.75rem;
-            transition: all 0.2s;
-        }
-
-        .btn-borrar:hover {
-            background: #FF5555;
-            color: white;
-        }
-
-        .box-pago-info {
-            background: rgba(42, 48, 41, 0.5);
-            border-left: 3px solid var(--oro-tactico);
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            display: none;
-            color: var(--oro-brillante);
+            box-sizing: border-box;
         }
 
         .alerta-antiestafa {
@@ -286,15 +227,35 @@
             margin: 20px 0;
             text-align: center;
         }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-    <img src="logo.jpeg" alt="World of Wings Logo" class="logo-img">
-</div>
-        
+            <img src="logo.jpeg" 
+                 alt="World of Wings Logo" 
+                 class="logo-img"
+                 onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src='logo.JPG'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src='logo.jpg'; } else if (this.dataset.tried === '2') { this.dataset.tried = '3'; this.src='logo.png'; }">
+        </div>
         <h1>WORLD OF WINGS</h1>
         <p>Sabor de Alto Impacto • Edición Táctica</p>
     </header>
@@ -304,480 +265,212 @@
         <!-- MISIÓN DE HISTORIA -->
         <div class="mision-card">
             <h2>📜 EXPEDIENTE DE MISIÓN DE HONOR</h2>
-            <p>"Este puesto nace para honrar a mi esposo, Ray Brown D Jr., un hombre de Tennessee que vivió con la fuerza de un soldado y la paz de un maestro de yoga. Ray fue un héroe de la Segunda Guerra Mundial, condecorado con la Estrella de Bronce. Hoy fusiono su legado estadounidense con mi sazón venezolana para ofrecerles algo real, exclusivo y con honor."</p>
+            <p>"Este puesto nace para honrar a mi esposo, Ray Brown D Jr., un hombre cuya valentía y honor inspiran cada receta. Aquí servimos con disciplina, sabor y lealtad."</p>
             <div class="mision-firma">— Minsi, Orgullosa Esposa y Chef de World of Wings</div>
         </div>
 
-        <!-- HORARIOS DE OPERACIÓN -->
-        <div style="background: rgba(31, 40, 29, 0.5); border: 1px solid var(--oro-tactico); padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center;">
-            <h2 style="font-family: 'Cinzel', serif; color: var(--oro-tactico); font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 2px;">
-                ⏱️ HORARIOS DE OPERACIÓN
-            </h2>
-            <p style="color: var(--oro-brillante); font-weight: bold; margin-bottom: 5px; font-size: 0.95rem;">DÍAS DE OFENSIVA:</p>
-            <p style="color: #F5F5F7; margin-bottom: 12px; font-size: 0.9rem;">
-                🛡️ <strong>JUEVES / VIERNES / SÁBADO</strong><br>
-                Despliegue: 05:00 PM – Cierre de Base: 12:00 AM
-            </p>
-            <p style="color: #F5F5F7; margin-bottom: 15px; font-size: 0.9rem;">
-                🛡️ <strong>DOMINGOS</strong><br>
-                Despliegue: 05:00 PM – Cierre de Base: 10:00 PM
-            </p>
-            <div style="border-top: 1px dashed rgba(212,175,55,0.3); padding-top: 10px; margin-top: 10px;">
-                <p style="color: #A5B0A0; font-size: 0.85rem; font-weight: 500;">
-                    <strong>LUNES A MIÉRCOLES:</strong><br>
-                    MANTENIMIENTO DE ARMAMENTO (CERRADO)
-                </p>
+        <!-- SECCIÓN ALITAS -->
+        <h2 class="seccion-titulo">🍗 ESCUADRÓN DE ALITAS</h2>
+        <div class="menu-grid">
+            <div class="item-card">
+                <div>
+                    <div class="item-nombre">Alitas Tácticas (6 Unidades)</div>
+                    <div class="item-desc">Jugosas alitas crujientes bañadas en tu salsa favorita.</div>
+                    <div class="item-precio">$6.00</div>
+                </div>
+                <select id="salsa-alitas-6" class="item-select">
+                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
+                    <option value="Buffalo Picante">Salsa: Buffalo Picante</option>
+                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Salsa: Ajo Parmesano</option>
+                </select>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Alitas Tácticas (6 Uds)', 6.00, 'salsa-alitas-6')">Agregar a la Orden</button>
+            </div>
+
+            <div class="item-card">
+                <div>
+                    <div class="item-nombre">Alitas Comando (12 Unidades)</div>
+                    <div class="item-desc">Ración doble con opción de hasta 2 salsas a elección.</div>
+                    <div class="item-precio">$11.00</div>
+                </div>
+                <select id="salsa-alitas-12" class="item-select">
+                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
+                    <option value="Buffalo Picante">Salsa: Buffalo Picante</option>
+                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Salsa: Ajo Parmesano</option>
+                </select>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Alitas Comando (12 Uds)', 11.00, 'salsa-alitas-12')">Agregar a la Orden</button>
             </div>
         </div>
 
-        <!-- MENÚ DE ALITAS DE POLLO -->
-        <h2 class="seccion-titulo">🪖 ALITAS DE POLLO</h2>
-        <div class="grid-menu">
-            
-            <div class="card-item">
+        <!-- SECCIÓN TIRAS -->
+        <h2 class="seccion-titulo">🎖️ TIRAS & MUNICIÓN INFANTIL</h2>
+        <div class="menu-grid">
+            <div class="item-card">
                 <div>
-                    <h3>"PATRULLA 6-ALFA"</h3>
-                    <p>6 Alitas crujientes<br>+ 100g de Papas fritas<br>+ Ensalada Americana</p>
+                    <div class="item-nombre">Tiras de Pechuga Tácticas</div>
+                    <div class="item-desc">Tiras de pechuga empanizadas, doradas y crujientes.</div>
+                    <div class="item-precio">$5.50</div>
                 </div>
-                <div>
-                    <select id="salsa-alita-1">
-                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
-                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
-                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
-                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('PATRULLA 6-ALFA (ALITAS)', 'salsa-alita-1');">🛒 Añadir a la Orden</button>
-                </div>
+                <select id="salsa-tiras" class="item-select">
+                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
+                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
+                    <option value="Ajo Parmesano">Salsa: Ajo Parmesano</option>
+                </select>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Tiras de Pechuga', 5.50, 'salsa-tiras')">Agregar a la Orden</button>
             </div>
 
-            <div class="card-item">
+            <div class="item-card">
                 <div>
-                    <h3>"THE IRON TRIANGLE" (EL TRIÁNGULO DE HIERRO)</h3>
-                    <p>10 Alitas crujientes<br>+ 200g de Papas fritas<br>+ 2 Ensaladas Americana</p>
+                    <div class="item-nombre">Baby Bravo (Kids Menu)</div>
+                    <div class="item-desc">Ración infantil de tiras suavemente sazonadas + papas.</div>
+                    <div class="item-precio">$4.00</div>
                 </div>
-                <div>
-                    <select id="salsa-alita-2">
-                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
-                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
-                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
-                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE IRON TRIANGLE (ALITAS)', 'salsa-alita-2');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-
-            <div class="card-item">
-                <div>
-                    <h3>"ARCO LIGHT" (OPERACIÓN ARCO LIGHT)</h3>
-                    <p>15 Alitas crujientes<br>+ 300g de Papas fritas<br>+ Ensalada Familiar</p>
-                </div>
-                <div>
-                    <select id="salsa-alita-3">
-                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
-                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
-                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
-                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('ARCO LIGHT (ALITAS)', 'salsa-alita-3');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-
-            <div class="card-item">
-                <div>
-                    <h3>"OPERATION LINEBACKER" (FAMILIAR)</h3>
-                    <p>24 Alitas crujientes<br>+ Ración extra grande de Papas<br>+ Ensalada + Salsas variadas</p>
-                </div>
-                <div>
-                    <select id="salsa-alita-4">
-                        <option value="Salsas Variadas Seleccionadas">🟢 Salsas Variadas Incluidas</option>
-                        <option value="BLACK OPS BBQ">🟢 Opción 1: BLACK OPS BBQ</option>
-                        <option value="FUEGO ALIADO">🟡 Opción 2: FUEGO ALIADO</option>
-                        <option value="AGENTE NARANJA">🟠 Opción 3: AGENTE NARANJA</option>
-                        <option value="HONEY BRAVO">🟡 Opción 4: HONEY BRAVO</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('OPERATION LINEBACKER (ALITAS)', 'salsa-alita-4');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- MENÚ DE TIRAS DE POLLO -->
-        <h2 class="seccion-titulo">🪖 TIRAS DE POLLO</h2>
-        <div class="grid-menu">
-            
-            <div class="card-item">
-                <div>
-                    <span class="badge-kids">👶 MUNICIÓN INFANTIL (MENÚ NIÑOS)</span>
-                    <h3>"BABY BRAVO"</h3>
-                    <p>5 Tiras de pollo crujientes<br>+ Papas fritas<br>+ Ensalada Americana</p>
-                </div>
-                <div>
-                    <select id="salsa-tender-1">
-                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
-                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza - Ideal Niños)</option>
-                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango)</option>
-                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BABY BRAVO (MENÚ INFANTIL)', 'salsa-tender-1');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-
-            <div class="card-item">
-                <div>
-                    <h3>"INFANTRY SPEC" (ESPECIFICACIÓN DE INFANTERÍA)</h3>
-                    <p>8 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana</p>
-                </div>
-                <div>
-                    <select id="salsa-tender-2">
-                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
-                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
-                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
-                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('INFANTRY SPEC (TIRAS DE POLLO)', 'salsa-tender-2');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-
-            <div class="card-item">
-                <div>
-                    <h3>"THE BIG BERTHA" (ARTILLERÍA PESADA)</h3>
-                    <p>12 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana<br>+ Salsas</p>
-                </div>
-                <div>
-                    <select id="salsa-tender-3">
-                        <option value="BLACK OPS BBQ">🟢 BLACK OPS BBQ (Ahumada)</option>
-                        <option value="FUEGO ALIADO">🟡 FUEGO ALIADO (Búfalo Picante)</option>
-                        <option value="AGENTE NARANJA">🟠 AGENTE NARANJA (Mango Táctico)</option>
-                        <option value="HONEY BRAVO">🟡 HONEY BRAVO (Miel Mostaza)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE BIG BERTHA (TIRAS DE POLLO)', 'salsa-tender-3');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SECCIÓN DE SALSAS PARA LLEVAR / RACIONES EXTRA -->
-        <h2 class="seccion-titulo">🪖 SALSAS INDEPENDIENTES (PARA LLEVAR A CASA)</h2>
-        <p style="text-align: center; color: var(--oro-tactico); margin-bottom: 20px; font-style: italic;">
-            "Recetas fabricadas en nuestra propia armería. Sin conservantes, solo sabor de combate."
-        </p>
-        <div class="grid-menu">
-            <div class="card-item">
-                <div>
-                    <h3>SALSA BBQ: "BLACK OPS BBQ"</h3>
-                    <p>Ahumada en el campamento con un toque de madera de roble.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BLACK OPS BBQ (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-            <div class="card-item">
-                <div>
-                    <h3>SALSA BUFALO: "FUEGO ALIADO"</h3>
-                    <p>Nuestra fórmula picante clásica.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('FUEGO ALIADO (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-            <div class="card-item">
-                <div>
-                    <h3>SALSA DE MANGO: "AGENTE NARANJA"</h3>
-                    <p>Dulzor intenso con un final táctico.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('AGENTE NARANJA (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-            <div class="card-item">
-                <div>
-                    <h3>MIEL MOSTAZA: "HONEY BRAVO"</h3>
-                    <p>El equilibrio perfecto entre la dulzura de la miel pura y el ataque de la mostaza artesanal.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('HONEY BRAVO (SALSA INDEPENDIENTE)');">🛒 Añadir a la Orden</button>
-                </div>
+                <select id="salsa-baby" class="item-select">
+                    <option value="Sin Salsa (Natural)">Sin Salsa (Natural)</option>
+                    <option value="BBQ Clásica">Salsa: BBQ Clásica</option>
+                    <option value="Miel Mostaza Táctica">Salsa: Miel Mostaza Táctica</option>
+                </select>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Baby Bravo (Kids)', 4.00, 'salsa-baby')">Agregar a la Orden</button>
             </div>
         </div>
 
-        <!-- SECCIÓN DE BEBIDAS -->
-        <h2 class="seccion-titulo">🪖 BEBIDAS</h2>
-        <div class="grid-menu">
-            <div class="card-item">
+        <!-- SECCIÓN VINAGRES ARTESANALES -->
+        <h2 class="seccion-titulo">🧪 TIENDA DE ELIXIRES: VINAGRES ARTESANALES</h2>
+        <div class="menu-grid">
+            <div class="item-card">
                 <div>
-                    <h3>SOUTHERN ICED TEA (TÉ FRÍO)</h3>
-                    <p>"Receta tradicional sureña: Refrescante, dulce y servido muy frío. ¡I Feel Good!"</p>
+                    <div class="item-nombre">Elixir Místico de Vinagre Artesanal</div>
+                    <div class="item-desc">Fórmula especial de la casa para aderezar e intensificar sabores.</div>
+                    <div class="item-precio">$3.50</div>
                 </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('SOUTHERN ICED TEA');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-            <div class="card-item">
-                <div>
-                    <h3>REFRESCOS VARIADOS</h3>
-                    <p>"Pregunta por nuestras opciones disponibles."</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('REFRESCOS VARIADOS');">🛒 Añadir a la Orden</button>
-                </div>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Vinagre Artesanal Elixir', 3.50, null)">Agregar a la Orden</button>
             </div>
         </div>
 
-        <!-- SECCIÓN DE EXTRAS -->
-        <h2 class="seccion-titulo">🪖 EXTRAS</h2>
-        <div class="grid-menu">
-            <div class="card-item">
-                <div>
-                    <h3>PAPAS FRITAS: "MUNICIÓN DE CAMPO" 200g</h3>
-                    <p>Corte clásico, doradas al fuego de la base. El combustible esencial para mantener la posición.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('PAPAS FRITAS (MUNICIÓN DE CAMPO)');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-            <div class="card-item">
-                <div>
-                    <h3>ENSALADA AMERICANA: "RACIÓN DE RECO"</h3>
-                    <p>Disponible en Ración Individual y Ración Familiar.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('ENSALADA AMERICANA (RACIÓN DE RECO)');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-            <div class="card-item">
-                <div>
-                    <h3>AROS DE CEBOLLA: "ROTORES HUEY" 150g</h3>
-                    <p>Anillos de cebolla con doble empanizado táctico. Crujientes como una victoria en el frente.</p>
-                </div>
-                <div>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('AROS DE CEBOLLA (ROTORES HUEY)');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-        </div>
-        <p style="text-align: center; color: var(--oro-tactico); margin-top: 25px; font-weight: bold; text-transform: uppercase;">
-            "FÓRMULA SECRETA CLASIFICADA" — Sazonador Artesanal de la Base
-        </p>
-
-        <!-- SECCIÓN DE TIENDA (ADEREZOS Y VINAGRES) -->
-        <h2 class="seccion-titulo">🪖 TIENDA</h2>
-        <div class="grid-menu">
-            <div class="card-item">
-                <div>
-                    <h3>LOS ELIXIRES (VINAGRES ARTESANALES ¼ L)</h3>
-                    <p style="color: var(--oro-brillante); font-weight: bold; margin-bottom: 8px;">
-                        Variedades: Cambur, Mango, Guayaba, Piña y Coco.
-                    </p>
-                    <p>Uso: El secreto para tus ensaladas y carnes en casa.</p>
-                </div>
-                <div>
-                    <select id="sabor-elixir">
-                        <option value="Cambur">🍌 Vinagre de Cambur</option>
-                        <option value="Mango">🥭 Vinagre de Mango</option>
-                        <option value="Guayaba">🍈 Vinagre de Guayaba</option>
-                        <option value="Piña">🍍 Vinagre de Piña</option>
-                        <option value="Coco">🥥 Vinagre de Coco</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('LOS ELIXIRES (VINAGRE ARTESANAL ¼ L)', 'sabor-elixir');">🛒 Añadir a la Orden</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- MÓDULO DE REGISTRO TÁCTICO PARA PROMOS -->
-        <div style="background: rgba(31, 40, 29, 0.6); border: 2px dashed var(--oro-tactico); padding: 25px; border-radius: 12px; margin: 40px 0; text-align: center;">
-            <div style="font-size: 2.5rem; margin-bottom: 10px;">🪖</div>
-            <h2 style="font-family: 'Cinzel', serif; color: var(--oro-tactico); font-size: 1.2rem; margin-bottom: 10px; letter-spacing: 1px;">
-                REGÍSTRATE AQUÍ PARA RECIBIR NUESTRAS PROMOS EXCLUSIVAS TODOS LOS JUEVES.
-            </h2>
-            <p style="color: var(--oro-brillante); font-weight: 700; margin-bottom: 20px; font-size: 0.9rem;">
-                ¡SOLO PARA LA UNIDAD DE ÉLITE!
-            </p>
-
-            <form id="form-registro-elite" onsubmit="registrarCombatiente(event)" style="max-width: 400px; margin: 0 auto;">
-                <input type="text" id="reg-nombre" placeholder="Nombre completo" required style="width: 100%; margin-bottom: 10px;">
-                <input type="tel" id="reg-telefono" placeholder="Número de WhatsApp (ej: 04121234567)" required style="width: 100%; margin-bottom: 15px;">
-                
-                <button type="submit" class="btn-accion" style="padding: 15px;">
-                    🪖 UNIRME A LA UNIDAD DE ÉLITE
-                </button>
-            </form>
-
-            <div id="mensaje-registro" style="display: none; margin-top: 15px; color: var(--oro-brillante); font-weight: bold; font-size: 0.85rem;"></div>
-
-            <p style="font-size: 0.75rem; color: #A5B0A0; margin-top: 20px; line-height: 1.4;">
-                🔒 <strong>Privacidad Garantizada:</strong> Tu información es 100% confidencial. No enviamos spam ni compartimos tu contacto con nadie. Solo recibirás nuestras promociones exclusivas de los jueves directamente de nosotros.
-            </p>
-        </div>
-
-        <!-- MÓDULO CHECKOUT E INFORMACIÓN DE PAGO -->
-        <div class="checkout-card">
-            <h2>🎯 OPERACIÓN DE DESPLIEGUE</h2>
-            
-            <div style="background: rgba(31, 40, 29, 0.6); border: 1px solid var(--oro-tactico); padding: 15px; border-radius: 8px; margin-bottom: 25px;">
-                <p style="color: var(--oro-brillante); font-weight: bold; text-align: center; margin-bottom: 10px; font-size: 0.9rem;">
-                    🚁 EL COSTO DE ENVÍO ES CANCELADO DIRECTAMENTE A LA UNIDAD DE TRANSPORTE:
-                </p>
-                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #D1D5D0; line-height: 1.8;">
-                    <li>🔹 <strong>Cercanías de la Base:</strong> $1.00</li>
-                    <li>🔹 <strong>Zonas Distantes:</strong> $2.00</li>
-                    <li>⭐ <strong>¡MISIÓN CUMPLIDA!:</strong> Envío GRATIS en consumos mayores a $18.</li>
-                </ul>
-                <p style="font-size: 0.8rem; color: #A5B0A0; margin-top: 10px; font-style: italic; border-top: 1px dashed rgba(212,175,55,0.3); padding-top: 8px;">
-                    <strong>Nota:</strong> Tiempo estimado de arribo: 30–45 min según el clima en el frente.
-                </p>
+        <!-- RESUMEN DE ORDEN -->
+        <div class="orden-panel">
+            <h2>🛒 DESPLIEGUE DE TU PEDIDO</h2>
+            <ul id="lista-orden" class="orden-lista">
+                <li style="text-align: center; color: #888;">Tu carrito de combate está vacío.</li>
+            </ul>
+            <div style="text-align: right; font-size: 1.2rem; font-weight: bold; color: var(--oro-brillante); margin-bottom: 20px;">
+                Total: $<span id="total-precio">0.00</span>
             </div>
 
-            <div id="lista-carrito" style="margin-bottom: 20px;">
-                <p style="text-align: center; color: #777; font-size: 0.85rem;">No has seleccionado raciones aún.</p>
+            <div class="campo-formulario">
+                <label for="nombre-cliente">Nombre del Comandante / Cliente:</label>
+                <input type="text" id="nombre-cliente" placeholder="Ej. Carlos Mendoza">
             </div>
 
-            <input type="text" id="nombre" placeholder="Nombre completo del combatiente">
-            <input type="text" id="direccion" placeholder="Dirección exacta de entrega / Delivery">
+            <div class="campo-formulario">
+                <label for="direccion-cliente">Dirección de Entrega / Punto de Despliegue:</label>
+                <input type="text" id="direccion-cliente" placeholder="Ej. Calle 5 con Av. Principal, Casa #12">
+            </div>
 
-            <select id="metodo-pago" onchange="mostrarInfoPago()">
-                <option value="">-- Selecciona Método de Pago --</option>
-                <option value="Binance Pay (USDT)">🟡 Binance Pay (USDT)</option>
-                <option value="Pago Móvil Banesco">🇻🇪 Pago Móvil Banesco</option>
-                <option value="Zinli">💳 Zinli</option>
-                <option value="PayPal">🔵 PayPal</option>
-                <option value="Efectivo USD">💵 Efectivo USD en Entrega</option>
-            </select>
+            <div class="campo-formulario">
+                <label for="metodo-pago">Método de Pago:</label>
+                <select id="metodo-pago">
+                    <option value="Binance">Binance (USDT)</option>
+                    <option value="Zinli">Zinli</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Banesco">Banesco (Transferencia/Pago Móvil)</option>
+                    <option value="Efectivo USD">Efectivo USD</option>
+                </select>
+            </div>
 
-            <div id="info-binance" class="box-pago-info">📌 <strong>Binance Pay:</strong> Pay ID: TU_PAY_ID | Correo: tu-correo-binance@email.com</div>
-            <div id="info-banesco" class="box-pago-info">📌 <strong>Pago Móvil Banesco:</strong> CI: V-XX.XXX.XXX | Telf: 04XX-XXX-XXXX</div>
-            <div id="info-zinli" class="box-pago-info">📌 <strong>Zinli:</strong> Correo: tu-correo-zinli@email.com</div>
-            <div id="info-paypal" class="box-pago-info">📌 <strong>PayPal:</strong> Correo: tu-correo-paypal@email.com</div>
-
-            <input type="text" id="referencia" placeholder="Número de referencia de pago (Obligatorio)" style="margin-top: 15px;">
+            <div class="campo-formulario">
+                <label for="referencia-pago">Número de Referencia de Pago:</label>
+                <input type="text" id="referencia-pago" placeholder="Ej. 987654 (Omitir si es Efectivo USD)">
+            </div>
 
             <div class="alerta-antiestafa">
-                🛡️ <strong>SISTEMA ANTIESTAFA:</strong> Todas las transacciones se verifican manualmente antes de iniciar la preparación.
+                ⚠️ <strong>SISTEMA ANTIESTAFA ACTIVO:</strong> Todos los pagos por transferencia o divisas digitales son auditados antes del despachado de la unidad.
             </div>
 
-            <button class="btn-accion" style="padding: 18px; font-size: 1rem;" onclick="reproducirSonidoEfecto(); procesarPedidoWhatsApp();">💬 ORDENA CLICANDO AQUÍ</button>
-            
-            <p style="text-align: center; color: var(--oro-brillante); margin-top: 15px; font-size: 0.8rem; font-style: italic;">
-                "MISIÓN: SACIAR TU HAMBRE. OBJETIVO: CUMPLIDO."<br>
-                Calidad artesanal bajo fuego.
-            </p>
+            <button class="btn-whatsapp" onclick="enviarPedidoWhatsApp()">🚀 ENVIAR PEDIDO POR WHATSAPP</button>
         </div>
 
     </div>
 
-    <!-- SCRIPTS INTERACTIVOS -->
     <script>
-        let orden = [];
-        const URL_GOOGLE_SCRIPT = "TU_URL_DE_APPS_SCRIPT";
+        let carrito = [];
 
-        function reproducirSonidoEfecto() {
-            try {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                const ctx = new AudioContext();
-                const bufferSize = ctx.sampleRate * 0.3;
-                const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-                const output = buffer.getChannelData(0);
-                for (let i = 0; i < bufferSize; i++) {
-                    output[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.3));
-                }
-                const whiteNoise = ctx.createBufferSource();
-                whiteNoise.buffer = buffer;
-                const filter = ctx.createBiquadFilter();
-                filter.type = 'lowpass';
-                filter.frequency.setValueAtTime(800, ctx.currentTime);
-                whiteNoise.connect(filter);
-                filter.connect(ctx.destination);
-                whiteNoise.start();
-            } catch(e) {
-                console.log("Audio no disponible");
-            }
-        }
-
-        function agregarAlCarrito(producto, selectId = null) {
-            let detalle = producto;
+        function agregarAlCarrito(nombre, precio, selectId) {
+            let salsa = "";
             if (selectId) {
-                let valor = document.getElementById(selectId).value;
-                detalle += ` + Salsa: [${valor}]`;
+                const selectElement = document.getElementById(selectId);
+                salsa = " (" + selectElement.value + ")";
             }
-            orden.push(detalle);
-            actualizarLista();
+            
+            const itemNombreCompleto = nombre + salsa;
+            carrito.push({ nombre: itemNombreCompleto, precio: precio });
+            actualizarOrden();
         }
 
-        function borrarDelCarrito(index) {
-            orden.splice(index, 1);
-            actualizarLista();
-        }
-
-        function actualizarLista() {
-            let cont = document.getElementById('lista-carrito');
-            if (orden.length === 0) {
-                cont.innerHTML = '<p style="text-align: center; color: #777; font-size: 0.85rem;">No has seleccionado raciones aún.</p>';
+        function actualizarOrden() {
+            const lista = document.getElementById('lista-orden');
+            const totalElemento = document.getElementById('total-precio');
+            
+            if (carrito.length === 0) {
+                lista.innerHTML = '<li style="text-align: center; color: #888;">Tu carrito de combate está vacío.</li>';
+                totalElemento.innerText = '0.00';
                 return;
             }
-            cont.innerHTML = orden.map((item, i) => `
-                <div class="item-orden">
-                    <span>🍗 ${item}</span>
-                    <button class="btn-borrar" onclick="borrarDelCarrito(${i})">Eliminar</button>
-                </div>
-            `).join('');
-        }
 
-        function mostrarInfoPago() {
-            document.querySelectorAll('.box-pago-info').forEach(el => el.style.display = 'none');
-            let m = document.getElementById('metodo-pago').value;
-            if(m === 'Binance Pay (USDT)') document.getElementById('info-binance').style.display = 'block';
-            if(m === 'Pago Móvil Banesco') document.getElementById('info-banesco').style.display = 'block';
-            if(m === 'Zinli') document.getElementById('info-zinli').style.display = 'block';
-            if(m === 'PayPal') document.getElementById('info-paypal').style.display = 'block';
-        }
+            lista.innerHTML = '';
+            let total = 0;
 
-        function registrarCombatiente(event) {
-            event.preventDefault();
-            let nombre = document.getElementById('reg-nombre').value;
-            let telefono = document.getElementById('reg-telefono').value;
-            let msgDiv = document.getElementById('mensaje-registro');
-
-            msgDiv.style.display = 'block';
-            msgDiv.style.color = '#D4AF37';
-            msgDiv.innerText = "⏳ Procesando registro en la base de datos...";
-
-            fetch(URL_GOOGLE_SCRIPT, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nombre: nombre, telefono: telefono })
-            })
-            .then(() => {
-                reproducirSonidoEfecto();
-                msgDiv.style.color = '#F3E5AB';
-                msgDiv.innerText = "✅ ¡REGISTRO EXITOSO! Ya formas parte de la Unidad de Élite.";
-                document.getElementById('form-registro-elite').reset();
-            })
-            .catch(error => {
-                msgDiv.style.color = '#FF5555';
-                msgDiv.innerText = "❌ Error en la transmisión. Intenta de nuevo.";
+            carrito.forEach((item, index) => {
+                total += item.precio;
+                const li = document.createElement('li');
+                li.className = 'orden-item';
+                li.innerHTML = `
+                    <span>${item.nombre} - $${item.precio.toFixed(2)}</span>
+                    <button style="background: var(--rojo-alerta); color: white; border: none; padding: 2px 8px; border-radius: 3px; cursor: pointer;" onclick="eliminarDelCarrito(${index})">X</button>
+                `;
+                lista.appendChild(li);
             });
+
+            totalElemento.innerText = total.toFixed(2);
         }
 
-        function procesarPedidoWhatsApp() {
-            let nombre = document.getElementById('nombre').value;
-            let direccion = document.getElementById('direccion').value;
-            let metodo = document.getElementById('metodo-pago').value;
-            let ref = document.getElementById('referencia').value;
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarOrden();
+        }
 
-            if (orden.length === 0 || !nombre || !direccion || !metodo) {
-                alert("Atención: Completa todos los campos e ingresa al menos un platillo.");
+        function enviarPedidoWhatsApp() {
+            const nombre = document.getElementById('nombre-cliente').value.trim();
+            const direccion = document.getElementById('direccion-cliente').value.trim();
+            const metodo = document.getElementById('metodo-pago').value;
+            const ref = document.getElementById('referencia-pago').value.trim();
+
+            if (!nombre || !direccion) {
+                alert("⚠️ Por favor ingresa tu nombre y dirección de entrega.");
                 return;
             }
-            if (metodo !== 'Efectivo USD' && (!ref || ref.trim().length < 4)) {
-                alert("⚠️ Antiestafa: Ingresa el número de referencia válido.");
+
+            if (carrito.length === 0) {
+                alert("⚠️ Agrega al menos un producto a tu orden.");
                 return;
             }
+
+            if (metodo !== 'Efectivo USD' && (!ref || ref.length < 4)) {
+                alert("⚠️ Antiestafa: Ingresa el número de referencia válido de tu pago.");
+                return;
+            }
+
+            let ordenTexto = carrito.map(i => i.nombre + " - $" + i.precio.toFixed(2));
+            let totalFinal = document.getElementById('total-precio').innerText;
 
             let msg = `🪖 *DESPLIEGUE DE PEDIDO - WORLD OF WINGS*%0A%0A` +
                       `👤 *Cliente:* ${nombre}%0A` +
                       `📍 *Entrega:* ${direccion}%0A` +
-                      `🍗 *Raciones:*%0A• ${orden.join('%0A• ')}%0A%0A` +
+                      `🍗 *Raciones:*%0A• ${ordenTexto.join('%0A• ')}%0A%0A` +
+                      `💵 *Total:* $${totalFinal}%0A` +
                       `💳 *Pago:* ${metodo}%0A` +
-                      `🔢 *Referencia:* ${ref || 'Efectivo USD'}%0A%0A` +
+                      `🔢 *Referencia:* ${ref || 'Efectivo USD'}%0A` +
                       `⚠️ *Estado:* En espera de verificación.`;
 
             // REEMPLAZA 584XXXXXXXXX POR TU NÚMERO REAL DE WHATSAPP AL LANZAR
@@ -786,4 +479,3 @@
     </script>
 </body>
 </html>
-
