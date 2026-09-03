@@ -41,7 +41,7 @@
         }
 
         .logo-container {
-            max-width: 180px;
+            max-width: 210px;
             margin: 0 auto 15px auto;
             border-radius: 50%;
             padding: 5px;
@@ -88,7 +88,7 @@
             backdrop-filter: blur(10px);
             padding: 25px;
             border-radius: 8px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
 
@@ -154,7 +154,7 @@
         .card-item h3 {
             font-family: 'Cinzel', serif;
             color: var(--oro-brillante);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 8px;
         }
 
@@ -277,9 +277,8 @@
 <body>
 
     <header>
-        <!-- LOGO DEL NEGOCIO INTEGRADO -->
         <div class="logo-container">
-            <img src="Logo world of wings mejorado fondo transparente-convertido-a-mediano.jpeg" alt="World of Wings Logo" class="logo-img" onerror="this.style.display='none'">
+            <img src="logo.jpeg" alt="World of Wings Logo" class="logo-img" onerror="this.style.display='none'">
         </div>
         <h1>WORLD OF WINGS</h1>
         <p>Sabor de Alto Impacto • Edición Táctica</p>
@@ -289,89 +288,276 @@
 
         <!-- MISIÓN DE HISTORIA -->
         <div class="mision-card">
-            <h2>📜 EXPEDIENTE DE MISION DE HONOR</h2>
+            <h2>📜 EXPEDIENTE DE MISIÓN DE HONOR</h2>
             <p>"Este puesto nace para honrar a mi esposo, Ray Brown D Jr., un hombre de Tennessee que vivió con la fuerza de un soldado y la paz de un maestro de yoga. Ray fue un héroe de la Segunda Guerra Mundial, condecorado con la Estrella de Bronce. Hoy fusiono su legado estadounidense con mi sazón venezolana para ofrecerles algo real, exclusivo y con honor."</p>
-            <div class="mision-firma">— Minsi, Creadora & Chef Oficial</div>
+            <div class="mision-firma">— Minsi, Orgullosa Esposa y Chef de World of Wings</div>
         </div>
 
-        <!-- MENÚ DE ALITAS INTERACTIVO -->
-        <h2 class="seccion-titulo">🛸 ROGER THAT WINGS (RACIONES)</h2>
+        <!-- HORARIOS DE OPERACIÓN -->
+        <div style="background: rgba(31, 40, 29, 0.5); border: 1px solid var(--oro-tactico); padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center;">
+            <h2 style="font-family: 'Cinzel', serif; color: var(--oro-tactico); font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 2px;">
+                ⏱️ HORARIOS DE OPERACIÓN
+            </h2>
+            <p style="color: var(--oro-brillante); font-weight: bold; margin-bottom: 5px; font-size: 0.95rem;">DÍAS DE OFENSIVA:</p>
+            <p style="color: #F5F5F7; margin-bottom: 12px; font-size: 0.9rem;">
+                🛡️ <strong>JUEVES / VIERNES / SÁBADO</strong><br>
+                Despliegue: 05:00 PM – Cierre de Base: 12:00 AM
+            </p>
+            <p style="color: #F5F5F7; margin-bottom: 15px; font-size: 0.9rem;">
+                🛡️ <strong>DOMINGOS</strong><br>
+                Despliegue: 05:00 PM – Cierre de Base: 10:00 PM
+            </p>
+            <div style="border-top: 1px dashed rgba(212,175,55,0.3); padding-top: 10px; margin-top: 10px;">
+                <p style="color: #A5B0A0; font-size: 0.85rem; font-weight: 500;">
+                    <strong>LUNES A MIÉRCOLES:</strong><br>
+                    MANTENIMIENTO DE ARMAMENTO (CERRADO)
+                </p>
+            </div>
+        </div>
+
+        <!-- MENÚ DE ALITAS DE POLLO -->
+        <h2 class="seccion-titulo">🪖 ALITAS DE POLLO</h2>
         <div class="grid-menu">
-            
             <div class="card-item">
                 <div>
-                    <h3>Patrulla Seis Alfa</h3>
-                    <p>6 Alitas crujientes preparadas bajo strictly estándares tácticos.</p>
+                    <h3>"PATRULLA 6-ALFA"</h3>
+                    <p>6 Alitas crujientes<br>+ 100g de Papas fritas<br>+ Ensalada Americana</p>
                 </div>
                 <div>
-                    <select id="salsa-1">
-                        <option value="Bomba de Humo (BBQ)">🟢 BBQ Dulce (Bomba de Humo)</option>
-                        <option value="Napalm Teriyaki">🟡 Napalm Teriyaki</option>
-                        <option value="Parmesano Ajo">🟡 Parmesano Ajo</option>
-                        <option value="Fuego Buffalo">🟠 Buffalo Picante</option>
-                        <option value="Defcon 1 Habanero">🔴 Defcon 1 (Habanero Extremo)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('Patrulla Seis Alfa', 'salsa-1');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('PATRULLA 6-ALFA (ALITAS)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
-
             <div class="card-item">
                 <div>
-                    <h3>The Iron Triangle</h3>
-                    <p>10 Alitas crujientes de combate táctico de alto impacto.</p>
+                    <h3>"THE IRON TRIANGLE" (EL TRIÁNGULO DE HIERRO)</h3>
+                    <p>10 Alitas crujientes<br>+ 200g de Papas fritas<br>+ 2 Ensaladas Americana</p>
                 </div>
                 <div>
-                    <select id="salsa-2">
-                        <option value="Bomba de Humo (BBQ)">🟢 BBQ Dulce (Bomba de Humo)</option>
-                        <option value="Napalm Teriyaki">🟡 Napalm Teriyaki</option>
-                        <option value="Parmesano Ajo">🟡 Parmesano Ajo</option>
-                        <option value="Fuego Buffalo">🟠 Buffalo Picante</option>
-                        <option value="Defcon 1 Habanero">🔴 Defcon 1 (Habanero Extremo)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('The Iron Triangle (10 Alitas)', 'salsa-2');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE IRON TRIANGLE (ALITAS)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
-
             <div class="card-item">
                 <div>
-                    <h3>Operación Arc Light</h3>
-                    <p>15 Alitas crujientes + 300g de papas tácticas + ensalada familiar.</p>
+                    <h3>"ARCO LIGHT" (OPERACIÓN ARCO LIGHT)</h3>
+                    <p>15 Alitas crujientes<br>+ 300g de Papas fritas<br>+ Ensalada Familiar</p>
                 </div>
                 <div>
-                    <select id="salsa-3">
-                        <option value="Bomba de Humo (BBQ)">🟢 BBQ Dulce (Bomba de Humo)</option>
-                        <option value="Napalm Teriyaki">🟡 Napalm Teriyaki</option>
-                        <option value="Parmesano Ajo">🟡 Parmesano Ajo</option>
-                        <option value="Fuego Buffalo">🟠 Buffalo Picante</option>
-                        <option value="Defcon 1 Habanero">🔴 Defcon 1 (Habanero Extremo)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('Operación Arc Light', 'salsa-3');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('ARCO LIGHT (ALITAS)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
-
             <div class="card-item">
                 <div>
-                    <h3>Operación Linebacker</h3>
-                    <p>24 Alitas crujientes para despliegue y combate familiar masivo.</p>
+                    <h3>"OPERATION LINEBACKER" (FAMILIAR)</h3>
+                    <p>24 Alitas crujientes<br>+ Ración extra grande de Papas<br>+ Ensalada + Salsas variadas</p>
                 </div>
                 <div>
-                    <select id="salsa-4">
-                        <option value="Bomba de Humo (BBQ)">🟢 BBQ Dulce (Bomba de Humo)</option>
-                        <option value="Napalm Teriyaki">🟡 Napalm Teriyaki</option>
-                        <option value="Parmesano Ajo">🟡 Parmesano Ajo</option>
-                        <option value="Fuego Buffalo">🟠 Buffalo Picante</option>
-                        <option value="Defcon 1 Habanero">🔴 Defcon 1 (Habanero Extremo)</option>
-                    </select>
-                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('Operación Linebacker', 'salsa-4');">🛒 Añadir a la Orden</button>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('OPERATION LINEBACKER (ALITAS)');">🛒 Añadir a la Orden</button>
                 </div>
             </div>
-
         </div>
 
-        <!-- MÓDULO CHECKOUT -->
+        <!-- MENÚ DE TIRAS DE POLLO -->
+        <h2 class="seccion-titulo">🪖 TIRAS DE POLLO</h2>
+        <div class="grid-menu">
+            <div class="card-item">
+                <div>
+                    <h3>"BABY BRAVO"</h3>
+                    <p>5 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BABY BRAVO (TIRAS DE POLLO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>"INFANTRY SPEC" (ESPECIFICACIÓN DE INFANTERÍA)</h3>
+                    <p>8 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('INFANTRY SPEC (TIRAS DE POLLO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>"THE BIG BERTHA" (ARTILLERÍA PESADA)</h3>
+                    <p>12 Tiras de pollo<br>+ Papas fritas<br>+ Ensalada Americana<br>+ Salsas</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('THE BIG BERTHA (TIRAS DE POLLO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE SALSAS -->
+        <h2 class="seccion-titulo">🪖 SALSAS</h2>
+        <p style="text-align: center; color: var(--oro-tactico); margin-bottom: 20px; font-style: italic;">
+            "Recetas fabricadas en nuestra propia armería. Sin conservantes, solo sabor de combate."
+        </p>
+        <div class="grid-menu">
+            <div class="card-item">
+                <div>
+                    <h3>SALSA BBQ: "BLACK OPS BBQ"</h3>
+                    <p>Ahumada en el campamento con un toque de madera de roble.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('BLACK OPS BBQ (SALSA)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>SALSA BUFALO: "FUEGO ALIADO"</h3>
+                    <p>Nuestra fórmula picante clásica.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('FUEGO ALIADO (SALSA BUFALO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>SALSA DE MANGO: "AGENTE NARANJA"</h3>
+                    <p>Dulzor intenso con un final táctico.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('AGENTE NARANJA (SALSA MANGO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>MIEL MOSTAZA: "HONEY BRAVO"</h3>
+                    <p>El equilibrio perfecto entre la dulzura de la miel pura y el ataque de la mostaza artesanal.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('HONEY BRAVO (MIEL MOSTAZA)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE BEBIDAS -->
+        <h2 class="seccion-titulo">🪖 BEBIDAS</h2>
+        <div class="grid-menu">
+            <div class="card-item">
+                <div>
+                    <h3>SOUTHERN ICED TEA (TÉ FRÍO)</h3>
+                    <p>"Receta tradicional sureña: Refrescante, dulce y servido muy frío. ¡I Feel Good!"</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('SOUTHERN ICED TEA');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>REFRESCOS VARIADOS</h3>
+                    <p>"Pregunta por nuestras opciones disponibles."</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('REFRESCOS VARIADOS');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE EXTRAS -->
+        <h2 class="seccion-titulo">🪖 EXTRAS</h2>
+        <div class="grid-menu">
+            <div class="card-item">
+                <div>
+                    <h3>PAPAS FRITAS: "MUNICIÓN DE CAMPO" 200g</h3>
+                    <p>Corte clásico, doradas al fuego de la base. El combustible esencial para mantener la posición.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('PAPAS FRITAS (MUNICIÓN DE CAMPO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>ENSALADA AMERICANA: "RACIÓN DE RECO"</h3>
+                    <p>Disponible en Ración Individual y Ración Familiar.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('ENSALADA AMERICANA (RACIÓN DE RECO)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div>
+                    <h3>AROS DE CEBOLLA: "ROTORES HUEY" 150g</h3>
+                    <p>Anillos de cebolla con doble empanizado táctico. Crujientes como una victoria en el frente.</p>
+                </div>
+                <div>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('AROS DE CEBOLLA (ROTORES HUEY)');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; color: var(--oro-tactico); margin-top: 25px; font-weight: bold; text-transform: uppercase;">
+            "FÓRMULA SECRETA CLASIFICADA" — Sazonador Artesanal de la Base
+        </p>
+
+        <!-- SECCIÓN DE TIENDA (ADEREZOS Y VINAGRES) -->
+        <h2 class="seccion-titulo">🪖 TIENDA</h2>
+        <div class="grid-menu">
+            <div class="card-item">
+                <div>
+                    <h3>LOS ELIXIRES (VINAGRES ARTESANALES ¼ L)</h3>
+                    <p style="color: var(--oro-brillante); font-weight: bold; margin-bottom: 8px;">
+                        Variedades: Cambur, Mango, Guayaba, Piña y Coco.
+                    </p>
+                    <p>Uso: El secreto para tus ensaladas y carnes en casa.</p>
+                </div>
+                <div>
+                    <select id="sabor-elixir">
+                        <option value="Cambur">🍌 Vinagre de Cambur</option>
+                        <option value="Mango">🥭 Vinagre de Mango</option>
+                        <option value="Guayaba">🍈 Vinagre de Guayaba</option>
+                        <option value="Piña">🍍 Vinagre de Piña</option>
+                        <option value="Coco">🥥 Vinagre de Coco</option>
+                    </select>
+                    <button class="btn-accion" onclick="reproducirSonidoEfecto(); agregarAlCarrito('LOS ELIXIRES (VINAGRE ARTESANAL ¼ L)', 'sabor-elixir');">🛒 Añadir a la Orden</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MÓDULO DE REGISTRO TÁCTICO PARA PROMOS -->
+        <div style="background: rgba(31, 40, 29, 0.6); border: 2px dashed var(--oro-tactico); padding: 25px; border-radius: 12px; margin: 40px 0; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">🪖</div>
+            <h2 style="font-family: 'Cinzel', serif; color: var(--oro-tactico); font-size: 1.2rem; margin-bottom: 10px; letter-spacing: 1px;">
+                REGÍSTRATE AQUÍ PARA RECIBIR NUESTRAS PROMOS EXCLUSIVAS TODOS LOS JUEVES.
+            </h2>
+            <p style="color: var(--oro-brillante); font-weight: 700; margin-bottom: 20px; font-size: 0.9rem;">
+                ¡SOLO PARA LA UNIDAD DE ÉLITE!
+            </p>
+
+            <form id="form-registro-elite" onsubmit="registrarCombatiente(event)" style="max-width: 400px; margin: 0 auto;">
+                <input type="text" id="reg-nombre" placeholder="Nombre completo" required style="width: 100%; margin-bottom: 10px;">
+                <input type="tel" id="reg-telefono" placeholder="Número de WhatsApp (ej: 04121234567)" required style="width: 100%; margin-bottom: 15px;">
+                
+                <button type="submit" class="btn-accion" style="padding: 15px;">
+                    🪖 UNIRME A LA UNIDAD DE ÉLITE
+                </button>
+            </form>
+
+            <div id="mensaje-registro" style="display: none; margin-top: 15px; color: var(--oro-brillante); font-weight: bold; font-size: 0.85rem;"></div>
+
+            <p style="font-size: 0.75rem; color: #A5B0A0; margin-top: 20px; line-height: 1.4;">
+                🔒 <strong>Privacidad Garantizada:</strong> Tu información es 100% confidencial. No enviamos spam ni compartimos tu contacto con nadie. Solo recibirás nuestras promociones exclusivas de los jueves directamente de nosotros.
+            </p>
+        </div>
+
+        <!-- MÓDULO CHECKOUT E INFORMACIÓN DE PAGO -->
         <div class="checkout-card">
-            <h2>🎯 ORDEN DE DESPLIEGUE</h2>
+            <h2>🎯 OPERACIÓN DE DESPLIEGUE</h2>
             
+            <div style="background: rgba(31, 40, 29, 0.6); border: 1px solid var(--oro-tactico); padding: 15px; border-radius: 8px; margin-bottom: 25px;">
+                <p style="color: var(--oro-brillante); font-weight: bold; text-align: center; margin-bottom: 10px; font-size: 0.9rem;">
+                    🚁 EL COSTO DE ENVÍO ES CANCELADO DIRECTAMENTE A LA UNIDAD DE TRANSPORTE:
+                </p>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #D1D5D0; line-height: 1.8;">
+                    <li>🔹 <strong>Cercanías de la Base:</strong> $1.00</li>
+                    <li>🔹 <strong>Zonas Distantes:</strong> $2.00</li>
+                    <li>⭐ <strong>¡MISIÓN CUMPLIDA!:</strong> Envío GRATIS en consumos mayores a $18.</li>
+                </ul>
+                <p style="font-size: 0.8rem; color: #A5B0A0; margin-top: 10px; font-style: italic; border-top: 1px dashed rgba(212,175,55,0.3); padding-top: 8px;">
+                    <strong>Nota:</strong> Tiempo estimado de arribo: 30–45 min según el clima en el frente.
+                </p>
+            </div>
+
             <div id="lista-carrito" style="margin-bottom: 20px;">
                 <p style="text-align: center; color: #777; font-size: 0.85rem;">No has seleccionado raciones aún.</p>
             </div>
@@ -399,46 +585,51 @@
                 🛡️ <strong>SISTEMA ANTIESTAFA:</strong> Todas las transacciones se verifican manualmente antes de iniciar la preparación.
             </div>
 
-            <button class="btn-accion" style="padding: 18px; font-size: 1rem;" onclick="reproducirSonidoEfecto(); procesarPedidoWhatsApp();">🎖️ CONFIRMAR Y ENVIAR A WHATSAPP</button>
+            <button class="btn-accion" style="padding: 18px; font-size: 1rem;" onclick="reproducirSonidoEfecto(); procesarPedidoWhatsApp();">💬 ORDENA CLICANDO AQUÍ</button>
+            
+            <p style="text-align: center; color: var(--oro-brillante); margin-top: 15px; font-size: 0.8rem; font-style: italic;">
+                "MISIÓN: SACIAR TU HAMBRE. OBJETIVO: CUMPLIDO."<br>
+                Calidad artesanal bajo fuego.
+            </p>
         </div>
 
     </div>
 
-    <!-- SCRIPT INTERACTIVO CON SONIDO TÁCTICO -->
+    <!-- SCRIPTS INTERACTIVOS -->
     <script>
         let orden = [];
+        const URL_GOOGLE_SCRIPT = "TU_URL_DE_APPS_SCRIPT";
 
         function reproducirSonidoEfecto() {
             try {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
                 const ctx = new AudioContext();
-                
                 const bufferSize = ctx.sampleRate * 0.3;
                 const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
                 const output = buffer.getChannelData(0);
-                
                 for (let i = 0; i < bufferSize; i++) {
                     output[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.3));
                 }
-
                 const whiteNoise = ctx.createBufferSource();
                 whiteNoise.buffer = buffer;
-
                 const filter = ctx.createBiquadFilter();
                 filter.type = 'lowpass';
                 filter.frequency.setValueAtTime(800, ctx.currentTime);
-
                 whiteNoise.connect(filter);
                 filter.connect(ctx.destination);
                 whiteNoise.start();
             } catch(e) {
-                console.log("Audio no soportado o bloqueado por el navegador");
+                console.log("Audio no disponible");
             }
         }
 
-        function agregarAlCarrito(producto, selectId) {
-            let salsa = document.getElementById(selectId).value;
-            orden.push(`${producto} (${salsa})`);
+        function agregarAlCarrito(producto, selectId = null) {
+            let detalle = producto;
+            if (selectId) {
+                let valor = document.getElementById(selectId).value;
+                detalle += ` (${valor})`;
+            }
+            orden.push(detalle);
             actualizarLista();
         }
 
@@ -470,6 +661,34 @@
             if(m === 'PayPal') document.getElementById('info-paypal').style.display = 'block';
         }
 
+        function registrarCombatiente(event) {
+            event.preventDefault();
+            let nombre = document.getElementById('reg-nombre').value;
+            let telefono = document.getElementById('reg-telefono').value;
+            let msgDiv = document.getElementById('mensaje-registro');
+
+            msgDiv.style.display = 'block';
+            msgDiv.style.color = '#D4AF37';
+            msgDiv.innerText = "⏳ Procesando registro en la base de datos...";
+
+            fetch(URL_GOOGLE_SCRIPT, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nombre: nombre, telefono: telefono })
+            })
+            .then(() => {
+                reproducirSonidoEfecto();
+                msgDiv.style.color = '#F3E5AB';
+                msgDiv.innerText = "✅ ¡REGISTRO EXITOSO! Ya formas parte de la Unidad de Élite.";
+                document.getElementById('form-registro-elite').reset();
+            })
+            .catch(error => {
+                msgDiv.style.color = '#FF5555';
+                msgDiv.innerText = "❌ Error en la transmisión. Intenta de nuevo.";
+            });
+        }
+
         function procesarPedidoWhatsApp() {
             let nombre = document.getElementById('nombre').value;
             let direccion = document.getElementById('direccion').value;
@@ -493,7 +712,7 @@
                       `🔢 *Referencia:* ${ref || 'Efectivo USD'}%0A%0A` +
                       `⚠️ *Estado:* En espera de verificación.`;
 
-            // REEMPLAZA 584XXXXXXXXX POR TU NÚMERO REAL DE WHATSAPP
+            // REEMPLAZA 584XXXXXXXXX POR TU NÚMERO REAL DE WHATSAPP AL LANZAR
             window.location.href = `https://wa.me/584XXXXXXXXX?text=${msg}`;
         }
     </script>
